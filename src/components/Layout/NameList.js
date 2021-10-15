@@ -6,7 +6,7 @@ const NameList = (props) => {
 
     return (
         props.orderList.length > 0 ? 
-        <div style={{width: '100vw', height: '25vh', textAlign: 'center',
+        <div style={{width: '100vw', height: 'auto', textAlign: 'center',
             display: "flex",
             flexDirection: "column",
             flexWrap: "nowrap",
@@ -17,7 +17,7 @@ const NameList = (props) => {
         }}>
             {props.orderList.map((assct, i) => {
                 return (
-                    <span key={assct+i}>{assct}</span>
+                <span key={assct+i}>{i+1} {assct}</span>
                 )
             })}
         </div> :

@@ -50,8 +50,8 @@ function App() {
         </div>
       </div>
       {namePickView ? 
-        <NamePicker /> :
-        <AddRemoveNames />
+        <NamePicker allOfUs={allOfUs} /> :
+        <AddRemoveNames allOfUs={allOfUs} setAllOfUs={setAllOfUs}/>
       }
     </div>
   );
