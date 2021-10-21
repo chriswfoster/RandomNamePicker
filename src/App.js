@@ -1,7 +1,5 @@
 import {useState} from 'react';
-import logo from './logo.svg';
 import './App.css';
-import RobotLights from './components/Layout/RobotLights';
 import NamePicker from './components/Routes/NamePicker';
 import AddRemoveNames from './components/Routes/AddRemoveNames';
 
@@ -18,7 +16,7 @@ function App() {
     "Alejandro",
     "Claudio",
     "Elayna",
-    "Maddy",
+    // "Maddy",
     "Roberto"
   ]);
 
