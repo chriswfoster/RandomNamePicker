@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import RobotLights from '../Layout/RobotLights';
 import { Button } from 'antd';
+import doneSound from '../../doneSound.wav'
 import robotsound from '../../robotsound.wav'
 import NameList from '../Layout/NameList';
 
@@ -14,6 +15,7 @@ const NamePicker = (props) => {
     const namePickerCalc = () => {
         setOrderList([]);
         const audioController = document.getElementById("audio-controller");
+        const audioDoneController = document.getElementById("audio-done-controller");
         audioController.play();
         setStart(true);
         setTimeout(() => {
@@ -21,6 +23,8 @@ const NamePicker = (props) => {
             setStart(false);
             audioController.pause();
             audioController.currentTime = 0;
+            audioDoneController.play();
+
         }, 3000)
     }
 
@@ -52,6 +56,10 @@ const NamePicker = (props) => {
 
             <audio controls={false} id="audio-controller">
                 <source src={robotsound} type="audio/wav" />
+                Your browser does not support the audio element.
+            </audio>
+            <audio controls={false} loop={false} id="audio-done-controller">
+                <source src={doneSound} type="audio/wav" />
                 Your browser does not support the audio element.
             </audio>
             </header>
