@@ -48,7 +48,8 @@ const RobotLights = (props) => {
 
     return (
         <div style={{
-            width: '100vw',
+            width: '80vw',
+            marginTop: '15vh',
             display: "flex",flexDirection: "row",flexWrap: "nowrap", justifyContent: "space-around", alignItems: "stretch",alignContent: "stretch"
         }}>
             <div style={{...lightStyles, backgroundColor: figureOutColor(0)}} />
