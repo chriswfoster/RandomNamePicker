@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import RobotLights from '../Layout/RobotLights';
 import { Button } from 'antd';
 import doneSound from '../../doneSound.wav'
+import backgroundImage from '../../backgroundImage.png'
 import robotsound from '../../robotsound.wav'
 import NameList from '../Layout/NameList';
 
@@ -48,7 +49,7 @@ const NamePicker = (props) => {
     }
 
     return (      
-        <div className="fullview" >
+        <div className="fullview background-image" style={{backgroundImage: require('../../backgroundImage.png'), backgroundSize: '100% 100%'}} >
 
             <header className="App-header" style={{height: "25vh"}}>
                 
@@ -68,7 +69,7 @@ const NamePicker = (props) => {
 
             <Button
                 type="primary"
-                style={{marginTop: '20px'}}
+                style={{marginTop: '10vh', backgroundColor: '#39FF14', color: 'black'}}
                 onClick={namePickerCalc}
                 disabled={start}
                 size="large"

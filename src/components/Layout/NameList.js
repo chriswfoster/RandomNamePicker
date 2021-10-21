@@ -6,23 +6,25 @@ const NameList = (props) => {
 
     return (
         props.orderList.length > 0 ? 
-        <div style={{width: '100vw', height: 'auto', textAlign: 'center',
+        <div style={{width: '80vw', height: 'auto', textAlign: 'center',
+            marginLeft: "10vw",
+            marginTop: '5vh',
             display: "flex",
             flexDirection: "column",
             flexWrap: "nowrap",
             justifyContent: "space-around",
-            alignItems: "stretch",
+            alignItems: "flex-start",
             alignContent: "stretch",
-            backgroundColor: "#f8f8ff"
+            // backgroundColor: "#f8f8ff"
         }}>
             {props.orderList.map((assct, i) => {
                 return (
-                <span key={assct+i}>{i+1} {assct}</span>
+                <span style={{color: '#39FF14', fontSize: '1vw'}} key={assct+i}>{i+1} {assct}</span>
                 )
             })}
         </div> :
         props.start ? 
-            <span style={{fontSize: '30px', color: "white", width: "100vw", display: 'block'}}>COMPUTING...</span> :
+            <span style={{marginTop: '5vh', fontSize: '30px', color: "#39FF14", width: "100vw", display: 'block'}}>COMPUTING...</span> :
             null
     )
 }
